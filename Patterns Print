@@ -1,0 +1,28 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    // Java pattern print dsa questions
+	public static void main (String[] args) throws java.lang.Exception
+	{
+// 		int n = 4;
+		
+// 		for (int row = 1; row<=n; row++){
+// 		    for(int col = 1; col<=5; col++){
+// 		        System.out.print("* ");
+// 		    }
+// 		    System.out.println("* ");
+// 		}
+
+        int n = 5;
+        for(int row=1; row<=n; row++){
+            for(int col=1; col<=row; col++){
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+
+	}
+}
