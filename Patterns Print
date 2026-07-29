@@ -60,4 +60,52 @@ class Codechef
         }
 
 	}
+
+//   int n = 6;
+    //   space for
+    //   for(int row=1; row<=n; row++){
+    //       for(int col=1; col<=n-row; col++){
+    //           System.out.print("  ");
+    //       }
+    //       for(int col=1; col<=row; col++){
+    //           System.out.print("* ");
+    //       }
+    //       for(int col=1; col<=row-1; col++){
+    //           System.out.print("* ");
+    //       }
+           
+    //     System.out.println();
+           
+    //   }
+    
+    // for(int row=1; row<=6; row++){
+    //     for(int col=1; col<=n; col++){
+    //         if(row == 1 || row == 6){
+    //             System.out.print("* ");
+    //         }
+    //         else if(col == 1 || col == 6){
+    //             System.out.print("* ");
+    //         }
+    //         else{
+    //             System.out.print("  ");
+    //         }
+    //     }
+        
+    //      System.out.println();
+    // }
+    
+    int n = 10;
+    for(int row=1; row<=n; row++){
+        for(int col=1; col<=row; col++){
+            if( col == row || col == 1 || row == n){
+             System.out.print("* ");
+            }
+            else{
+                 System.out.print("  ");
+            }
+        }
+         System.out.println();
+    }
+    
+    }
 }
