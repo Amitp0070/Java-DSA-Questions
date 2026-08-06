@@ -69,14 +69,14 @@ public class Arrays {
 //        }
 //        System.out.println(max);
 
-        int arr[] = {1,2,3,4,5,2,2,4,-6,-3,-7,4,5,6,1232,45};
-        int n = arr.length;
-        int minValue = arr[0];
-        for(int i=1; i<n; i++){
-            if(arr[i] < minValue){
-                minValue = arr[i];
-            }
-        }
-        System.out.println(minValue);
+//        int arr[] = {1,2,3,4,5,2,2,4,-6,-3,-7,4,5,6,1232,45};
+//        int n = arr.length;
+//        int minValue = arr[0];
+//        for(int i=1; i<n; i++){
+//            if(arr[i] < minValue){
+//                minValue = arr[i];
+//            }
+//        }
+//        System.out.println(minValue);
     }
 }
