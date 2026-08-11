@@ -129,15 +129,15 @@ public class Arrays {
 //        System.out.println(maxValue);
 
 //        find minimum value
-        int arr[][] = {{2,3,4,5},{2,3,4,2,10}};
-        int minValue = arr[0][0];
-        for(int i=0; i<arr.length; i++){
-            for(int j=0; j<arr[i].length; j++){
-                if(arr[i][j] < minValue){
-                    minValue = arr[i][j];
-                }
-            }
-        }
-        System.out.println(minValue);
+//        int arr[][] = {{2,3,4,5},{2,3,4,2,10}};
+//        int minValue = arr[0][0];
+//        for(int i=0; i<arr.length; i++){
+//            for(int j=0; j<arr[i].length; j++){
+//                if(arr[i][j] < minValue){
+//                    minValue = arr[i][j];
+//                }
+//            }
+//        }
+//        System.out.println(minValue);
     }
 }
