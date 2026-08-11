@@ -69,14 +69,75 @@ public class Arrays {
 //        }
 //        System.out.println(max);
 
-//        int arr[] = {1,2,3,4,5,2,2,4,-6,-3,-7,4,5,6,1232,45};
-//        int n = arr.length;
-//        int minValue = arr[0];
-//        for(int i=1; i<n; i++){
-//            if(arr[i] < minValue){
-//                minValue = arr[i];
+//          .out.println(minValue);
+
+
+//    2D arrays
+//        int[][] arr = {{1,2},{2,3}};
+//        int rowlength = arr.length;
+//        int collength = arr[0].length;
+//
+//        for(int row=0; row<rowlength; row++){
+//            for(int col=0; col<collength; col++) {
+//                System.out.print(arr[row][col] + " ");
+//            }
+//            System.out.println();
+//        }
+
+//        int[][] arr = {{1,2,4},{2,3},{1,4,6},{7}};
+//        int rowlength = arr.length;
+//        for(int row=0; row<rowlength; row++){
+//            int collength = arr[row].length;
+//            for(int col=0; col<collength; col++){
+//                System.out.print(arr[row][col] + " ");
+//            }
+//            System.out.println();
+//        }
+
+//        Sum of all element
+//        int arr[][] = {{1,2,3}, {4,5,6}};
+//        int sum = 0;
+//        for(int  i=0; i<arr.length; i++){
+//            for(int j=0; j<arr[i].length; j++){
+//                int val = arr[i][j];
+//                sum  = sum + val;
 //            }
 //        }
-//        System.out.println(minValue);
+//        System.out.println(sum);
+
+//        Multiple of all element
+//        int arr[][] = {{1,2,1}, {2,3,4}};
+//        int multi = 1;
+//        for(int i=0; i<arr.length; i++){
+//            for(int j=0; j<arr[i].length; j++){
+//                int val = arr[i][j];
+//                multi = multi * val;
+//            }
+//        }
+//        System.out.println(multi);
+
+//        find max value of in array
+//        int arr[][] = {{1,2,3},{2,3,4},{3,7}};
+//        int maxValue = arr[0][0];
+//        for(int i=0; i<arr.length; i++){
+//            for(int j=0; j<arr[i].length; j++){
+//                if(arr[i][j]>maxValue){
+//                    maxValue = arr[i][j];
+//                }
+//            }
+//        }
+//        System.out.println(maxValue);
+
+//        find minimum value
+        int arr[][] = {{2,3,4,5},{2,3,4,2,10}};
+        int minValue = arr[0][0];
+        for(int i=0; i<arr.length; i++){
+            for(int j=0; j<arr[i].length; j++){
+                if(arr[i][j] < minValue){
+                    minValue = arr[i][j];
+                }
+            }
+        }
+        System.out.println(minValue);
     }
 }
