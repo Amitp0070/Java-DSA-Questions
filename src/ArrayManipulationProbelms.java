@@ -1,6 +1,7 @@
 import java.lang.String;
 import java.util.*;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class ArrayManipulationProbelms {
 
@@ -68,17 +69,17 @@ public class ArrayManipulationProbelms {
     static double avgOfArrayElements(int arr[]) {
         int n = arr.length;
         double sum = 0;
-        for(int i: arr){
+        for (int i : arr) {
             sum += i;
         }
-        double avg = sum/n;
+        double avg = sum / n;
         return avg;
     }
 
     /// Multiple each element of an Array by 10
-    static void multipleArrayElementBy10(int arr[]){
+    static void multipleArrayElementBy10(int arr[]) {
 //        int size = arr.length;
-        for(int i: arr){
+        for (int i : arr) {
             int multipleElementValue = i * 10;
             System.out.println(multipleElementValue);
 
@@ -90,13 +91,13 @@ public class ArrayManipulationProbelms {
     }
 
     /// Search for an element in an Array {Linear Search}
-    static boolean searchArrayElement(int arr[], int target){
+    static boolean searchArrayElement(int arr[], int target) {
         int n = arr.length;
-        int arrayElement =0;
+        int arrayElement = 0;
 //        System.out.println(target);
-        for(int i=0; i<n; i++){
-            if(i == target){
-              return true;
+        for (int i = 0; i < n; i++) {
+            if (i == target) {
+                return true;
             }
         }
         return false;
@@ -104,9 +105,9 @@ public class ArrayManipulationProbelms {
 
 
     /// Find the Maximum number in an Array
-    static int findMaxNumber(int arr[]){
+    static int findMaxNumber(int arr[]) {
         int maxVal = 0;
-        for(int i=0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             maxVal = Math.max(arr[i], maxVal);
 //            if(maxVal < arr[i]){
 //                maxVal = arr[i];
@@ -116,13 +117,13 @@ public class ArrayManipulationProbelms {
     }
 
 
-    static int[] findSumOfPoAndNeNumber(int arr[]){
+    static int[] findSumOfPoAndNeNumber(int arr[]) {
         int sumOfPositive = 0;
         int sumOfNegetive = 0;
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] > 0){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
                 sumOfPositive += arr[i];
-            }else{
+            } else {
                 sumOfNegetive += arr[i];
             }
         }
@@ -131,29 +132,86 @@ public class ArrayManipulationProbelms {
     }
 
 
-
     /// Count the numbers of Zeroes and Ones
-    static int[] countNumberOfZeroesAndOnes(int arr[]){
+    static int[] countNumberOfZeroesAndOnes(int arr[]) {
         int onesNum = 0;
         int zeroesNum = 0;
-        for(int i=0; i<arr.length; i++){
-            if(arr[i] == 1){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 1) {
                 onesNum++;
-            }else{
-                zeroesNum++ ;
+            } else {
+                zeroesNum++;
             }
         }
         int ans[] = {onesNum, zeroesNum};
         return ans;
     }
 
-    public static void main(String[] args) {
-        int arr[] = {1, 0, 1, 0, 1, 0};
-//        int arr[] = {1, 2, -3, -4, 5, 6};
-        int answer[] = countNumberOfZeroesAndOnes(arr);
-        for(int val: answer){
-            System.out.println(val);
+
+    /// Find the first unsorted element in  an array
+    static int unsortedElement(int arr[]) {
+        int unsortedElement = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                unsortedElement = arr[i + 1];
+                break;
+            }
+//            if (arr[i] == (arr[i + 1] - 1)) {
+//                unsortedElement = arr[i];
+//                break;
+//            }else if (arr[i] == arr[i + 1]){
+//                unsortedElement = arr[i + 1  ];
+//                break;
+//            }
         }
+        return unsortedElement;
+    }
+
+
+    /// Swap alternate elements in an array
+    static int[] swapAlternateElement(int arr[]){
+
+        for(int i=0; i<arr.length - 1; i++){
+            arr[i] = arr[i] ^ arr[i+1];
+            arr[i+1] = arr[i] ^ arr[i+1] ;
+            arr[i] = arr[i] ^ arr[i+1];
+            i++;
+        }
+        return arr;
+    }
+
+
+    /// Print Array Intersection element
+//    static int[] intersectionElement(int arr1[], int arr2[]){
+//        ArrayList<Integer> ans = new ArrayList<>();
+//        for(int i=0; i< arr1.length; i++){
+//            for(int j=0; j<arr2.length; j++){
+//                if(arr1[i] == arr2[j]){
+//                    ans.add[arr1[i]];
+//                    break;
+//                }
+//            }
+//        }
+//
+//    }
+
+    public static void main(String[] args) {
+//        int[] arr1 = {1,2,3,4,5,6,7,8};
+//        int[] arr2 = {3,4,5,6,7,8};
+//        int[] ans  =  intersectionElement(arr1, arr2);
+//        System.out.println("Intersection Element in an array " + Arrays.toString(ans));
+//        int arr[] = {4,5,6,7,8,9};
+//        int[] ans = swapAlternateElement(arr);
+//        System.out.println("Swap Element in an array " + Arrays.toString(ans));
+//        int arr[] = {9, 8, 7, 6, 55, 4, 3, 2, 1};
+//        int ans = unsortedElement(arr);
+//        System.out.println(unsortedElement(arr));
+
+//        int arr[] = {1, 2, -3, -4, 5, 6};
+//        int answer[] = countNumberOfZeroesAndOnes(arr);
+//        for(int val: answer){
+//            System.out.println(val);
+//        }
 //        System.out.println("Count of Ones: " + answer[0]);
 //        System.out.println("Count of Zeroes: " + answer[1]);
 //        int[] ans = findSumOfPoAndNeNumber(arr);
